@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ListItem from '../compoents/ListItem'
 
+
 export default function NotesListPage() {
     let [notes, setNotes] = useState([])
 
@@ -15,7 +16,11 @@ export default function NotesListPage() {
         setNotes(data)
     }
   return (
-    <div>
+    <div className='notes'>
+      <div className="notes-header">
+        <h2 className='notes-title'>&#9782; Notes</h2>
+        <div className="notes-count">{notes.length}</div>
+      </div>
       <div className="notes_list">
         {notes.map((note, index)=>(
             // <h3 key={index}>{note.body}</h3>
