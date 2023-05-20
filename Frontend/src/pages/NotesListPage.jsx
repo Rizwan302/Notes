@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ListItem from '../compoents/ListItem'
+import AddButton from '../compoents/AddButton'
 
 
 export default function NotesListPage() {
@@ -27,6 +28,7 @@ export default function NotesListPage() {
             <ListItem key={index} note={note} />
         ))}
       </div>
+      <AddButton/>
     </div>
   )
 }
